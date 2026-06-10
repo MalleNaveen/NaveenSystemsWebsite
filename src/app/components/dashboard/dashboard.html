@@ -1,0 +1,81 @@
+<div class="dashboard-container">
+  <nav class="dashboard-nav">
+    <div class="nav-brand">
+      <h1>Naveen Systems</h1>
+    </div>
+    <div class="nav-menu">
+      <button 
+        [class.active]="activeSection === 'home'"
+        (click)="navigateTo('home')"
+        class="nav-link"
+      >
+        Home
+      </button>
+      <button 
+        [class.active]="activeSection === 'services'"
+        (click)="navigateTo('services')"
+        class="nav-link"
+      >
+        Services
+      </button>
+      <button 
+        [class.active]="activeSection === 'portfolio'"
+        (click)="navigateTo('portfolio')"
+        class="nav-link"
+      >
+        Portfolio
+      </button>
+      <button 
+        [class.active]="activeSection === 'about'"
+        (click)="navigateTo('about')"
+        class="nav-link"
+      >
+        About
+      </button>
+      <button 
+        [class.active]="activeSection === 'contact'"
+        (click)="navigateTo('contact')"
+        class="nav-link"
+      >
+        Contact
+      </button>
+    </div>
+    <div class="nav-user">
+      <span class="user-email">{{ userEmail }}</span>
+      <button (click)="logout()" class="logout-btn">Logout</button>
+    </div>
+  </nav>
+
+  <main class="dashboard-content">
+    <section *ngIf="activeSection === 'home'" class="home-section">
+      <div class="hero">
+        <h2>Welcome to Naveen Systems</h2>
+        <p>Enterprise Software Solutions & Services</p>
+        <p class="hero-text">
+          Delivering innovative technology solutions for businesses of all sizes.
+          Explore our services, view our portfolio, and learn about our expertise.
+        </p>
+      </div>
+    </section>
+
+    <section *ngIf="activeSection === 'services'">
+      <app-services></app-services>
+    </section>
+
+    <section *ngIf="activeSection === 'portfolio'">
+      <app-portfolio></app-portfolio>
+    </section>
+
+    <section *ngIf="activeSection === 'about'">
+      <app-about></app-about>
+    </section>
+
+    <section *ngIf="activeSection === 'contact'">
+      <app-contact></app-contact>
+    </section>
+  </main>
+
+  <footer class="dashboard-footer">
+    <p>&copy; 2024 Naveen Systems Pvt Ltd. All rights reserved.</p>
+  </footer>
+</div>

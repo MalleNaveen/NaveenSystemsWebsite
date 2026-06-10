@@ -1,0 +1,21 @@
+<div class="portfolio-container">
+  <div class="portfolio-header">
+    <h2>Our Portfolio</h2>
+    <p>Successful projects delivered to clients across various industries</p>
+  </div>
+
+  <div class="portfolio-grid">
+    <div *ngFor="let project of projects" class="portfolio-card">
+      <div class="project-image">
+        <img [src]="project.imageUrl" [alt]="project.title" />
+      </div>
+      <div class="project-content">
+        <h3>{{ project.title }}</h3>
+        <p class="description">{{ project.description }}</p>
+        <div class="technologies">
+          <span *ngFor="let tech of project.technologies" class="tech-badge">{{ tech }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

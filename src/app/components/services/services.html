@@ -1,0 +1,14 @@
+<div class="services-container">
+  <div class="services-header">
+    <h2>Our Services</h2>
+    <p>Comprehensive software solutions tailored to your business needs</p>
+  </div>
+
+  <div class="services-grid">
+    <div *ngFor="let service of services" class="service-card">
+      <div class="service-icon">{{ service.icon }}</div>
+      <h3>{{ service.title }}</h3>
+      <p>{{ service.description }}</p>
+    </div>
+  </div>
+</div>

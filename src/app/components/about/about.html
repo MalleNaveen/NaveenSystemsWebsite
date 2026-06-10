@@ -1,0 +1,54 @@
+<div class="about-container">
+  <div class="about-header">
+    <h2>About Naveen Systems</h2>
+    <p>Leading provider of enterprise software solutions</p>
+  </div>
+
+  <div class="about-content">
+    <div class="about-text">
+      <h3>Who We Are</h3>
+      <p>
+        Naveen Systems is a leading software development and consulting firm with over 15 years of experience 
+        in delivering enterprise-grade solutions. We specialize in web development, mobile applications, cloud 
+        services, and AI/ML solutions for businesses across diverse industries.
+      </p>
+      <p>
+        Our team of skilled engineers, architects, and consultants are committed to transforming your business 
+        through innovative technology solutions. We believe in delivering quality, reliability, and exceptional 
+        customer service on every project.
+      </p>
+    </div>
+
+    <div class="stats-section">
+      <h3>Our Track Record</h3>
+      <div class="stats-grid">
+        <div *ngFor="let stat of stats" class="stat-card">
+          <div class="stat-value">{{ stat.value }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="values-section">
+      <h3>Our Values</h3>
+      <div class="values-grid">
+        <div class="value-item">
+          <h4>Innovation</h4>
+          <p>We embrace cutting-edge technologies and creative solutions</p>
+        </div>
+        <div class="value-item">
+          <h4>Quality</h4>
+          <p>We maintain the highest standards in code quality and deliverables</p>
+        </div>
+        <div class="value-item">
+          <h4>Integrity</h4>
+          <p>We operate with transparency and honesty in all business dealings</p>
+        </div>
+        <div class="value-item">
+          <h4>Excellence</h4>
+          <p>We strive for excellence in everything we do for our clients</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
